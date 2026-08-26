@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+  <defs>
+    <linearGradient id="shieldGradIcon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6B1E2C" />
+      <stop offset="100%" stop-color="#4A1520" />
+    </linearGradient>
+    <linearGradient id="goldGradIcon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5D77F" />
+      <stop offset="50%" stop-color="#D4A24C" />
+      <stop offset="100%" stop-color="#B37E28" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Shield Badge -->
+  <path d="M 30 3 L 55 12 V 30 C 55 45 43 55 30 58 C 17 55 5 45 5 30 V 12 Z" 
+        fill="url(#shieldGradIcon)" stroke="url(#goldGradIcon)" stroke-width="2.5" />
+
+  <!-- Subtle Inner Netting Wires -->
+  <g stroke="url(#goldGradIcon)" stroke-width="0.75" stroke-opacity="0.35">
+    <line x1="12" y1="18" x2="48" y2="44" />
+    <line x1="48" y1="18" x2="12" y2="44" />
+  </g>
+
+  <!-- Inner Gold Shield Border Accent -->
+  <path d="M 30 7 L 50 14 V 29 C 50 41 40 50 30 53 C 20 50 10 41 10 29 V 14 Z" 
+        fill="none" stroke="url(#goldGradIcon)" stroke-width="1" stroke-opacity="0.6" />
+
+  <!-- SE Monogram Text -->
+  <text x="30" y="37" 
+        font-family="Inter, system-ui, -apple-system, sans-serif" 
+        font-weight="900" 
+        font-size="20" 
+        fill="url(#goldGradIcon)" 
+        text-anchor="middle" 
+        letter-spacing="0.5">SE</text>
+</svg>

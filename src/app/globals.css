@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #f0f7ff;
+  --color-primary-100: #e0effe;
+  --color-primary-200: #bae0fd;
+  --color-primary-300: #7cc8fb;
+  --color-primary-400: #38b6ef;
+  --color-primary-500: #4FC3F7;
+  --color-primary-600: #194a7a;
+  --color-primary-700: #0B2545;
+  --color-primary-800: #081c35;
+  --color-primary-900: #051325;
+  
+  --color-navy-dark: #07182C;
+  --color-navy-medium: #0B2545;
+  --color-navy-light: #133E6F;
+  
+  --color-accent-orange: #4FC3F7;
+  --color-accent-hover: #38b6ef;
+  --color-accent-sky: #4FC3F7;
+  --color-sky-blue: #4FC3F7;
+  --color-navy-blue: #0B2545;
+  
+  --color-success-green: #25D366;
+  --color-bg-light: #F8FAFC;
+  --color-border-subtle: #E2E8F0;
+  
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #6B7280;
+  
+  --font-sans: var(--font-inter), var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #0B2545;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4FC3F7;
+}
+
+/* Text Gradient Utility */
+.text-gradient {
+  background: linear-gradient(135deg, #0B2545 0%, #4FC3F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Sky Blue & Navy CTA Button Utilities */
+.btn-primary-red, .btn-primary-accent, .btn-accent {
+  background: #4FC3F7;
+  color: #0B2545;
+  font-weight: 800;
+  border-radius: 9999px;
+  box-shadow: 0 10px 25px rgba(79, 195, 247, 0.35);
+  transition: all 300ms ease;
+}
+.btn-primary-red:hover, .btn-primary-accent:hover, .btn-accent:hover {
+  background: #38b6ef;
+  color: #051325;
+  box-shadow: 0 15px 30px rgba(79, 195, 247, 0.50);
+  transform: translateY(-2px);
+}
+
+.btn-secondary-red, .btn-secondary-navy {
+  background: transparent;
+  border: 2px solid #4FC3F7;
+  color: #ffffff;
+  border-radius: 9999px;
+  transition: all 300ms ease;
+}
+.btn-secondary-red:hover, .btn-secondary-navy:hover {
+  background: #4FC3F7;
+  color: #0B2545;
+  transform: translateY(-2px);
+}
+
+.btn-navy {
+  background: #0B2545;
+  color: #ffffff;
+  font-weight: 800;
+  border-radius: 9999px;
+  box-shadow: 0 10px 25px rgba(11, 37, 69, 0.25);
+  transition: all 300ms ease;
+}
+.btn-navy:hover {
+  background: #133E6F;
+  color: #4FC3F7;
+  transform: translateY(-2px);
+}
+
+/* Card Hover Animation Utility */
+.card-premium {
+  background: #ffffff;
+  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.04);
+  transition: all 300ms ease;
+}
+.card-premium:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(11, 37, 69, 0.08);
+  border-color: #4FC3F7;
+}
+
+/* Custom scroll-margin for anchor links */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 70" width="380" height="70">
+  <defs>
+    <linearGradient id="shieldGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A1520" />
+      <stop offset="100%" stop-color="#2D0B13" />
+    </linearGradient>
+    <linearGradient id="goldGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5D77F" />
+      <stop offset="50%" stop-color="#D4A24C" />
+      <stop offset="100%" stop-color="#B37E28" />
+    </linearGradient>
+  </defs>
+
+  <!-- SE Shield Icon -->
+  <g transform="translate(5, 5)">
+    <!-- Outer Shield Badge -->
+    <path d="M 30 3 L 55 12 V 30 C 55 45 43 55 30 58 C 17 55 5 45 5 30 V 12 Z" 
+          fill="url(#shieldGradLight)" stroke="url(#goldGradLight)" stroke-width="2.5" />
+
+    <!-- Subtle Inner Wires -->
+    <g stroke="url(#goldGradLight)" stroke-width="0.75" stroke-opacity="0.4">
+      <line x1="12" y1="18" x2="48" y2="44" />
+      <line x1="48" y1="18" x2="12" y2="44" />
+    </g>
+
+    <!-- Inner Gold Frame -->
+    <path d="M 30 7 L 50 14 V 29 C 50 41 40 50 30 53 C 20 50 10 41 10 29 V 14 Z" 
+          fill="none" stroke="url(#goldGradLight)" stroke-width="1" stroke-opacity="0.7" />
+
+    <!-- SE Monogram -->
+    <text x="30" y="37" 
+          font-family="Inter, system-ui, -apple-system, sans-serif" 
+          font-weight="900" 
+          font-size="20" 
+          fill="url(#goldGradLight)" 
+          text-anchor="middle" 
+          letter-spacing="0.5">SE</text>
+  </g>
+
+  <!-- Main Text Typography -->
+  <text x="75" y="38" 
+        font-family="Inter, system-ui, -apple-system, sans-serif" 
+        font-weight="900" 
+        font-size="25" 
+        fill="#FFFFFF" 
+        letter-spacing="-0.3">SHYAM ENTERPRISES</text>
+  
+  <!-- Subtitle Tagline -->
+  <text x="76" y="55" 
+        font-family="Inter, system-ui, -apple-system, sans-serif" 
+        font-weight="700" 
+        font-size="9.5" 
+        fill="#F5D77F" 
+        letter-spacing="1.8">SAFETY NETS &amp; INVISIBLE GRILLS</text>
+</svg>
