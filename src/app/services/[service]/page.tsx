@@ -210,7 +210,11 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       <ServiceFAQs faqs={serviceDetail.faqs} serviceName={serviceDetail.name} />
 
       {/* Related Services, Areas, and Blog list */}
-      <ServiceRelated related={relatedServices} categoryName={serviceDetail.categoryName} />
+      <ServiceRelated
+        related={relatedServices}
+        categoryName={serviceDetail.categoryName}
+        currentServiceSlug={serviceDetail.slug}
+      />
 
       {/* Inquiry Contact Form */}
       <ContactForm />

@@ -45,18 +45,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/services/${slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
-    priority: 0.7,
+    priority: 0.8,
   }));
 
-  // 4. Dynamic Area Pages (20 Andhra Pradesh Areas)
+  // 4. Dynamic Area Pages (7 Andhra Pradesh Areas)
   const areaRoutes = andhraPradeshAreasList.map((slug) => ({
     url: `${baseUrl}/areas/${slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
-    priority: 0.6,
+    priority: 0.8,
   }));
 
-  // 5. Dynamic Project Case Studies (3 Projects)
+  // 5. Dynamic Service + Location Pages (18 services x 7 areas = 126 pages)
+  const serviceAreaRoutes: MetadataRoute.Sitemap = [];
+  Object.keys(servicesData).forEach((serviceSlug) => {
+    andhraPradeshAreasList.forEach((areaSlug) => {
+      serviceAreaRoutes.push({
+        url: `${baseUrl}/services/${serviceSlug}/${areaSlug}`,
+        lastModified: new Date(),
+        changeFrequency: "weekly" as const,
+        priority: 0.9, // High priority for PPC & Local SEO Landing Pages
+      });
+    });
+  });
+
+  // 6. Dynamic Project Case Studies (3 Projects)
   const projectRoutes = Object.keys(projectsData).map((slug) => ({
     url: `${baseUrl}/projects/${slug}`,
     lastModified: new Date(),
@@ -64,7 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  // 6. Dynamic Blog Posts (4 Posts)
+  // 7. Dynamic Blog Posts (4 Posts)
   const blogRoutes = Object.keys(blogData).map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
     lastModified: new Date(),
@@ -72,5 +85,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...categoryRoutes, ...serviceRoutes, ...areaRoutes, ...projectRoutes, ...blogRoutes];
+  return [
+    ...staticRoutes,
+    ...categoryRoutes,
+    ...serviceRoutes,
+    ...areaRoutes,
+    ...serviceAreaRoutes,
+    ...projectRoutes,
+    ...blogRoutes,
+  ];
 }

@@ -1,6 +1,19 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Home, MapPin, Shield, CheckCircle2, Phone, MessageSquare, ArrowRight } from "lucide-react";
+import {
+  Home,
+  MapPin,
+  Shield,
+  CheckCircle2,
+  Phone,
+  MessageSquare,
+  ArrowRight,
+  Star,
+  Award,
+  Clock,
+  Layers,
+  ShieldCheck,
+} from "lucide-react";
 import { areasData } from "@/utils/areasData";
 import { servicesData } from "@/utils/servicesData";
 import { generateBreadcrumbSchema, generateLocalBusinessSchema, generateFAQPageSchema } from "@/utils/schema";
@@ -21,8 +34,8 @@ export async function generateMetadata({ params }: PageProps) {
     };
   }
 
-  const title = `Safety Nets & Invisible Grills in ${areaDetail.name} | Pigeon Guard Solutions - Safety Nets & Invisible Grills Andhra Pradesh`;
-  const description = `Pigeon Guard Solutions provides professional balcony safety nets, pigeon netting, and SS316 invisible grills in ${areaDetail.name}, Andhra Pradesh. Free doorstep inspection across Vijayawada, Guntur, Ongole, Nellore, Tirupathi, Visakhapatnam, and Rajahmundry.`;
+  const title = `Safety Nets & Invisible Grills in ${areaDetail.name} | Pigeon Guard Solutions Andhra Pradesh`;
+  const description = `Pigeon Guard Solutions provides professional balcony safety nets, pigeon netting, and SS316 invisible grills in ${areaDetail.name}, Andhra Pradesh. Free doorstep inspection across ${areaDetail.localities.slice(0, 5).join(", ")}. Call +91 93927 99311.`;
 
   return {
     title,
@@ -67,16 +80,13 @@ export default async function AreaDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  // Get 5 nearby areas
-  const nearbyAreas = areaDetail.nearbySlugs.map((slug) => ({
-    slug,
-    name: slug
-      .replace("-", " ")
-      .replace(/\b\w/g, (c) => c.toUpperCase()),
-  }));
+  // Get nearby areas
+  const nearbyAreas = areaDetail.nearbySlugs
+    .map((slug) => areasData[slug])
+    .filter(Boolean);
 
-  // Fetch 3 popular services to highlight
-  const popularServices = Object.values(servicesData).slice(0, 3);
+  // All 18 services
+  const allServices = Object.values(servicesData);
 
   // Local FAQs customized to the area name
   const localFAQs = [
@@ -92,6 +102,10 @@ export default async function AreaDetailPage({ params }: PageProps) {
       question: `Can Pigeon Guard invisible grills handle the weather in ${areaDetail.name}?`,
       answer: `Yes. Our invisible grills utilize marine-grade SS316 stainless steel wires wrapped in a clear nylon protective casing. They are highly rustproof and resist Andhra Pradesh's extreme heat and coastal sea moisture.`,
     },
+    {
+      question: `Are your bird control spikes and nets safe and humane?`,
+      answer: `Yes, 100%. We strictly use non-lethal, harmless exclusion methods that do not trap or injure birds, in full compliance with animal welfare standards.`,
+    },
   ];
 
   // Dynamic Schemas
@@ -101,9 +115,13 @@ export default async function AreaDetailPage({ params }: PageProps) {
     { name: areaDetail.name, item: `/areas/${areaDetail.slug}` },
   ];
 
+  const whatsappMessage = encodeURIComponent(
+    `Hello Pigeon Guard Solutions! I would like to request a free site inspection for safety nets / invisible grills in ${areaDetail.name}.`
+  );
+
   return (
-    <div className="bg-slate-50 min-h-screen py-12">
-      {/* Inject Dynamic Schemas */}
+    <div className="bg-slate-50 min-h-screen py-8 md:py-12">
+      {/* Dynamic Schemas */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbLinks)) }}
@@ -118,184 +136,216 @@ export default async function AreaDetailPage({ params }: PageProps) {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Breadcrumb Navigation UI */}
-        <nav className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-8" aria-label="Breadcrumb">
+        {/* Breadcrumbs */}
+        <nav className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-6" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-[#4FC3F7] flex items-center gap-1">
             <Home className="w-3.5 h-3.5" />
             <span>Home</span>
           </Link>
           <span>/</span>
           <Link href="/areas" className="hover:text-[#4FC3F7]">
-            Areas We Serve
+            Areas
           </Link>
           <span>/</span>
-          <span className="text-slate-600 font-bold truncate max-w-[200px]">
-            {areaDetail.name}
-          </span>
+          <span className="text-slate-800 font-bold">{areaDetail.name}</span>
         </nav>
 
-        {/* Hyperlocal Hero Banner */}
-        <div className="bg-slate-900 rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden mb-16 shadow-md">
-          {/* Overlay Background graphic elements */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/90 to-transparent z-0"></div>
-          
-          <div className="relative z-10 max-w-2xl flex flex-col gap-5 items-start">
-            <span className="bg-[#4FC3F7] text-white text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full">
-              Hyperlocal Andhra Pradesh Coverage
-            </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight font-sans tracking-tight">
-              Safety Nets & Invisible Grills in {areaDetail.name}
+        {/* Hero Banner */}
+        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#07182C] via-[#0B2545] to-[#133E6F] text-white p-8 sm:p-12 mb-12 shadow-xl">
+          <div className="max-w-3xl space-y-5">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-xs font-bold text-sky-200 border border-white/15">
+              <MapPin className="w-3.5 h-3.5 text-[#4FC3F7]" />
+              <span>Doorstep Service across {areaDetail.name}, AP</span>
+            </div>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+              Safety Nets &amp; Invisible Grills in <span className="text-[#4FC3F7]">{areaDetail.name}</span>
             </h1>
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Premium protective netting, bird exclusion structures, and space-saving hangers installed by certified professionals in {areaDetail.name}, Andhra Pradesh.
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+              Premium protective netting, bird exclusion structures, and space-saving cloth hangers installed by certified professionals across all neighborhoods in {areaDetail.name}.
             </p>
 
-            {/* AI Search Overview box */}
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/20 max-w-xl flex flex-col gap-2">
-              <span className="text-[10px] font-extrabold text-[#4FC3F7] tracking-widest uppercase">
-                AEO Search Overview
-              </span>
-              <p className="text-xs text-slate-200 leading-relaxed font-semibold">
-                Pigeon Guard Solutions is the leading safety net and invisible grill installer in {areaDetail.name}, Andhra Pradesh. We provide child balcony shields, bite-proof pet nets, and rustproof SS316 wire grills custom anchored with free measurements.
-              </p>
-            </div>
-
             {/* CTAs */}
-            <div className="flex flex-wrap gap-3 mt-2 w-full sm:w-auto">
+            <div className="flex flex-wrap gap-3 pt-2">
               <a
-                href="tel:+91 93927 99311"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#4FC3F7] text-white font-bold px-5 py-3 rounded-full hover:bg-accent-hover text-xs shadow-xs"
+                href="tel:+919392799311"
+                className="flex items-center justify-center gap-2 bg-[#4FC3F7] text-slate-900 font-extrabold px-6 py-3 rounded-full hover:bg-sky-300 text-xs shadow-lg transition-transform hover:scale-105"
               >
                 <Phone className="w-4 h-4" />
-                <span>Call Now</span>
+                <span>Call +91 93927 99311</span>
               </a>
               <a
-                href="https://wa.me/919392799311?text=Hi%20Pigeon%20Guard%2C%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20safety%20nets%2Finvisible%20grills."
+                href={`https://wa.me/919392799311?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-emerald-600 text-white font-bold px-5 py-3 rounded-full hover:bg-emerald-700 text-xs shadow-xs"
+                className="flex items-center justify-center gap-2 bg-[#25D366] text-white font-extrabold px-6 py-3 rounded-full hover:bg-[#1EBE5D] text-xs shadow-lg transition-transform hover:scale-105"
               >
-                <MessageSquare className="w-4 h-4 fill-white/10" />
-                <span>WhatsApp Quote</span>
+                <MessageSquare className="w-4 h-4" />
+                <span>WhatsApp Free Quote</span>
               </a>
             </div>
           </div>
         </div>
 
-        {/* Hyperlocal Content Sections */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
-          {/* Main Content (Left) */}
-          <div className="lg:col-span-8 flex flex-col gap-8 text-left">
-            {/* Overview */}
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs flex flex-col gap-4">
-              <h2 className="text-xl font-bold text-slate-800 border-b border-slate-100 pb-3">
-                Apartment Living & Balcony Hazards in {areaDetail.name}
+        {/* Localities Grid */}
+        <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs mb-12">
+          <div className="flex items-center justify-between mb-6 border-b border-slate-100 pb-4">
+            <div>
+              <h2 className="text-xl font-bold text-slate-900">
+                Key Localities &amp; Residential Sectors Served in {areaDetail.name}
               </h2>
-              <p className="text-slate-500 text-sm leading-relaxed">
-                {areaDetail.overview}
-              </p>
-              <p className="text-slate-500 text-sm leading-relaxed">
-                {areaDetail.apartmentLiving}
+              <p className="text-xs text-slate-500 mt-1">
+                Same-day inspection available with certified height technicians across these neighborhoods.
               </p>
             </div>
-
-            {/* Safety & Bird Problems */}
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs flex flex-col gap-6">
-              <h3 className="text-lg font-bold text-slate-800">Local Safety Priorities & Bird Exclusions</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="flex flex-col gap-2">
-                  <span className="font-bold text-slate-800 text-sm flex items-center gap-2">
-                    <Shield className="w-4 h-4 text-[#4FC3F7] shrink-0" />
-                    <span>Balcony Protection</span>
-                  </span>
-                  <p className="text-slate-500 text-xs leading-relaxed">
-                    {areaDetail.balconySafety}
-                  </p>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <span className="font-bold text-slate-800 text-sm flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-success-green shrink-0" />
-                    <span>Hygiene & Bird Control</span>
-                  </span>
-                  <p className="text-slate-500 text-xs leading-relaxed">
-                    {areaDetail.birdProblem}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Weather & specs */}
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs flex flex-col gap-4">
-              <h3 className="text-base font-bold text-slate-800">Weather-Proofing Materials</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">
-                {areaDetail.weatherDetails}
-              </p>
-            </div>
+            <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-full">
+              <CheckCircle2 className="w-3.5 h-3.5" />
+              <span>Same-Day Dispatch</span>
+            </span>
           </div>
 
-          {/* Sidebar (Right) */}
-          <div className="lg:col-span-4 flex flex-col gap-8">
-            {/* Map Frame */}
-            <div className="flex flex-col gap-3">
-              <h3 className="text-sm font-bold text-slate-800 uppercase tracking-wider">Service Coverage Map</h3>
-              <MapFrame areaName={areaDetail.name} />
-            </div>
-
-            {/* Popular Installations */}
-            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs flex flex-col gap-5">
-              <h3 className="text-base font-bold text-slate-800 border-b border-slate-100 pb-2">
-                Popular Services
-              </h3>
-              <div className="flex flex-col gap-3">
-                {popularServices.map((service) => (
-                  <Link
-                    key={service.slug}
-                    href={`/services/${service.slug}`}
-                    className="flex items-center justify-between p-3.5 bg-slate-50 hover:bg-sky-50/50 border border-slate-150 rounded-xl transition-all group"
-                  >
-                    <span className="text-xs font-bold text-slate-700 group-hover:text-[#4FC3F7] transition-colors truncate">
-                      {service.name}
-                    </span>
-                    <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:translate-x-0.5 group-hover:text-[#4FC3F7] transition-all" />
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Nearby Areas */}
-            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs flex flex-col gap-4">
-              <h3 className="text-base font-bold text-slate-800 border-b border-slate-100 pb-2">
-                Nearby Service Zones
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {nearbyAreas.map((area) => (
-                  <Link
-                    key={area.slug}
-                    href={`/areas/${area.slug}`}
-                    className="text-xs font-semibold px-3 py-2 bg-slate-50 hover:bg-sky-50 border border-slate-200 rounded-lg text-slate-600 hover:text-[#4FC3F7] hover:border-[#4FC3F7]/30 transition-all truncate max-w-full"
-                  >
-                    {area.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Localized FAQ Accordion */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 mb-16 max-w-4xl mx-auto">
-          <h2 className="text-xl font-bold text-slate-800 mb-6 text-center">Frequently Asked Questions</h2>
-          <div className="space-y-4">
-            {localFAQs.map((faq, idx) => (
-              <div key={idx} className="pb-4 border-b border-slate-100 last:border-0 last:pb-0 text-left">
-                <h4 className="text-sm font-bold text-slate-800 mb-1.5">{faq.question}</h4>
-                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">{faq.answer}</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-2.5">
+            {areaDetail.localities.map((loc, idx) => (
+              <div
+                key={idx}
+                className="p-3 bg-slate-50 border border-slate-200/70 rounded-xl text-xs font-bold text-slate-700 flex items-center gap-1.5"
+              >
+                <MapPin className="w-3.5 h-3.5 text-[#0288D1] shrink-0" />
+                <span className="truncate">{loc}</span>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Lead Inquiry Form */}
+        {/* Main Content & Services Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+          {/* Left Column: Local Overview & Services */}
+          <div className="lg:col-span-8 space-y-8">
+            {/* Overview */}
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-4">
+              <h2 className="text-xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+                Apartment Living &amp; Safety Requirements in {areaDetail.name}
+              </h2>
+              <p className="text-slate-600 text-sm leading-relaxed">{areaDetail.overview}</p>
+              <p className="text-slate-600 text-sm leading-relaxed">{areaDetail.apartmentLiving}</p>
+            </div>
+
+            {/* All Services Dedicated Landing Pages in this City */}
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-6">
+              <div className="border-b border-slate-100 pb-4">
+                <h3 className="text-lg font-bold text-slate-900">
+                  All Specialized Services Available in {areaDetail.name}
+                </h3>
+                <p className="text-xs text-slate-500 mt-1">
+                  Click any service below to view custom pricing, specs, and instant quote options in {areaDetail.name}.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                {allServices.map((srv) => (
+                  <Link
+                    key={srv.slug}
+                    href={`/services/${srv.slug}/${areaDetail.slug}`}
+                    className="p-3.5 bg-slate-50 hover:bg-sky-50/70 border border-slate-200/80 rounded-2xl flex flex-col justify-between group transition-all"
+                  >
+                    <div>
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#0288D1] block mb-1">
+                        {srv.categoryName}
+                      </span>
+                      <h4 className="text-xs font-bold text-slate-800 group-hover:text-[#0288D1] transition-colors line-clamp-2">
+                        {srv.name} in {areaDetail.name}
+                      </h4>
+                    </div>
+                    <div className="pt-3 mt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-bold text-[#0288D1]">
+                      <span>Get Free Quote</span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Weather Notes */}
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-3">
+              <h3 className="text-base font-bold text-slate-900">
+                Weather-Proofing &amp; Material Selection for {areaDetail.name}
+              </h3>
+              <p className="text-slate-600 text-sm leading-relaxed">{areaDetail.weatherDetails}</p>
+            </div>
+          </div>
+
+          {/* Right Column: Sidebar Map & Nearby Cities */}
+          <div className="lg:col-span-4 space-y-8">
+            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs">
+              <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4">
+                Service Zone Map
+              </h3>
+              <MapFrame areaName={areaDetail.name} />
+            </div>
+
+            {/* Nearby Areas */}
+            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs">
+              <h3 className="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4">
+                Other Service Hubs in Andhra Pradesh
+              </h3>
+              <div className="space-y-2">
+                {nearbyAreas.map((city) => (
+                  <Link
+                    key={city.slug}
+                    href={`/areas/${city.slug}`}
+                    className="flex items-center justify-between p-3 bg-slate-50 hover:bg-sky-50 rounded-xl border border-slate-200 text-xs font-bold text-slate-700 hover:text-[#0288D1] transition-colors"
+                  >
+                    <span>{city.name}</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Customer Reviews for this City */}
+        {areaDetail.customerReviews && areaDetail.customerReviews.length > 0 && (
+          <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xs mb-16">
+            <h2 className="text-xl font-bold text-slate-900 mb-6 text-center">
+              Customer Reviews from {areaDetail.name} Residents
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {areaDetail.customerReviews.map((rev, idx) => (
+                <div key={idx} className="p-5 bg-slate-50 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+                  <div className="space-y-2">
+                    <div className="flex text-amber-400">
+                      {[...Array(rev.rating)].map((_, i) => (
+                        <Star key={i} className="w-3.5 h-3.5 fill-current" />
+                      ))}
+                    </div>
+                    <p className="text-xs text-slate-600 italic leading-relaxed">&ldquo;{rev.review}&rdquo;</p>
+                  </div>
+                  <div className="pt-3 border-t border-slate-200 mt-3 flex items-center justify-between">
+                    <span className="text-xs font-bold text-slate-800">{rev.name}</span>
+                    <span className="text-[10px] text-slate-500">{rev.locality}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* FAQs */}
+        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xs mb-16 max-w-4xl mx-auto">
+          <h2 className="text-xl font-bold text-slate-900 mb-6 text-center">
+            Frequently Asked Questions in {areaDetail.name}
+          </h2>
+          <div className="space-y-4">
+            {localFAQs.map((faq, idx) => (
+              <div key={idx} className="p-4 bg-slate-50 rounded-2xl border border-slate-200/70">
+                <h4 className="text-xs sm:text-sm font-bold text-slate-800 mb-1.5">{faq.question}</h4>
+                <p className="text-xs text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* General Contact Form */}
         <ContactForm />
       </div>
     </div>

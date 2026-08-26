@@ -112,10 +112,19 @@ export function ServiceWhyChoose() {
 interface RelatedProps {
   related: ServiceDetail[];
   categoryName: string;
+  currentServiceSlug?: string;
 }
 
-export function ServiceRelated({ related, categoryName }: RelatedProps) {
-  const areas = ["Vijayawada", "Visakhapatnam", "Guntur", "Nellore", "Tirupathi", "Rajahmundry", "Ongole"];
+export function ServiceRelated({ related, categoryName, currentServiceSlug }: RelatedProps) {
+  const areas = [
+    { name: "Vijayawada", slug: "vijayawada" },
+    { name: "Visakhapatnam", slug: "visakhapatnam" },
+    { name: "Guntur", slug: "guntur" },
+    { name: "Nellore", slug: "nellore" },
+    { name: "Tirupathi", slug: "tirupathi" },
+    { name: "Rajahmundry", slug: "rajahmundry" },
+    { name: "Ongole", slug: "ongole" },
+  ];
 
   const blogs = [
     { title: "Essential Balcony Safety Tips for Families living in High-Rise Apartments" },
@@ -158,16 +167,22 @@ export function ServiceRelated({ related, categoryName }: RelatedProps) {
             {/* Andhra Pradesh Areas */}
             <div className="flex flex-col gap-4">
               <h3 className="text-lg font-bold text-slate-800 border-b border-slate-100 pb-3">
-                Local Areas Covered
+                City Coverage &amp; Free Doorstep Inspection
               </h3>
               <div className="flex flex-wrap gap-2">
                 {areas.map((area) => (
-                  <span
-                    key={area}
-                    className="text-xs font-semibold px-3.5 py-2 bg-[#F8FAFC] border border-slate-200 rounded-lg text-slate-600 hover:text-[#4FC3F7] hover:border-[#4FC3F7]/30 cursor-default transition-all"
+                  <Link
+                    key={area.slug}
+                    href={
+                      currentServiceSlug
+                        ? `/services/${currentServiceSlug}/${area.slug}`
+                        : `/areas/${area.slug}`
+                    }
+                    className="text-xs font-semibold px-3.5 py-2 bg-[#F8FAFC] hover:bg-sky-50 border border-slate-200 hover:border-[#0288D1]/30 rounded-lg text-slate-700 hover:text-[#0288D1] transition-all flex items-center gap-1.5"
                   >
-                    {area}
-                  </span>
+                    <span>{area.name}</span>
+                    <ArrowRight className="w-3 h-3 text-slate-400" />
+                  </Link>
                 ))}
               </div>
             </div>
