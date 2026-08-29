@@ -462,6 +462,13 @@ export default function Navbar() {
                 >
                   <span>Chat on WhatsApp</span>
                 </a>
+                <a
+                  href="mailto:pigeonguardsolutions@gmail.com"
+                  className="bg-slate-100 hover:bg-slate-200 text-[#0B2545] py-3 text-center rounded-full text-sm font-bold flex items-center justify-center gap-2 transition-colors"
+                >
+                  <Mail className="w-4 h-4 text-[#0B2545]" />
+                  <span>pigeonguardsolutions@gmail.com</span>
+                </a>
               </div>
             </div>
           </motion.div>
