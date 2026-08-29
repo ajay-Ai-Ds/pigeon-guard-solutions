@@ -129,8 +129,7 @@ export default function Materials() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-
-              {/* Specifications Content */}
+               {/* Specifications Content */}
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-base font-bold text-[#0B2545] mb-3 group-hover:text-[#4FC3F7] transition-colors">
                   {item.name}

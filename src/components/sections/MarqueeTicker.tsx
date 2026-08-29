@@ -18,14 +18,14 @@ export default function MarqueeTicker() {
   const duplicatedItems = [...marqueeItems, ...marqueeItems, ...marqueeItems];
 
   return (
-    <div className="relative w-full overflow-hidden bg-gradient-to-r from-[#B0171C] via-[#D61F26] to-[#B0171C] border-y-2 border-[#D61F26]/40 py-3 shadow-md select-none z-20">
-      {/* Subtle LED top & bottom accent lines */}
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#F7E5C4] to-transparent opacity-80" />
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#F7E5C4] to-transparent opacity-80" />
+    <div className="relative w-full overflow-hidden bg-gradient-to-r from-[#07182C] via-[#0B2545] to-[#07182C] border-y border-[#4FC3F7]/30 py-3 shadow-lg select-none z-20">
+      {/* Subtle glowing top & bottom accent lines */}
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#4FC3F7]/60 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#4FC3F7]/60 to-transparent" />
 
       {/* Side gradient fade masks */}
-      <div className="absolute top-0 bottom-0 left-0 w-12 sm:w-24 bg-gradient-to-r from-[#B0171C] to-transparent z-10 pointer-events-none" />
-      <div className="absolute top-0 bottom-0 right-0 w-12 sm:w-24 bg-gradient-to-l from-[#B0171C] to-transparent z-10 pointer-events-none" />
+      <div className="absolute top-0 bottom-0 left-0 w-12 sm:w-28 bg-gradient-to-r from-[#07182C] to-transparent z-10 pointer-events-none" />
+      <div className="absolute top-0 bottom-0 right-0 w-12 sm:w-28 bg-gradient-to-l from-[#07182C] to-transparent z-10 pointer-events-none" />
 
       {/* Scrolling Ticker Track */}
       <div className="flex w-max">
@@ -44,16 +44,16 @@ export default function MarqueeTicker() {
             return (
               <div
                 key={index}
-                className="flex items-center gap-2.5 sm:gap-3 text-white font-sans text-xs sm:text-sm tracking-wide shrink-0 whitespace-nowrap bg-black/20 px-3.5 py-1.5 rounded-full border border-[#133E6F]"
+                className="flex items-center gap-2.5 sm:gap-3 text-white font-sans text-xs sm:text-sm tracking-wide shrink-0 whitespace-nowrap bg-white/[0.07] hover:bg-white/[0.12] px-4 py-1.5 rounded-full border border-white/15 backdrop-blur-xs transition-all duration-300"
               >
-                <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#0B2545]/20 border border-[#D61F26]/50 flex items-center justify-center shrink-0">
+                <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#4FC3F7]/20 border border-[#4FC3F7]/50 flex items-center justify-center shrink-0">
                   <Icon className="w-3.5 h-3.5 text-[#4FC3F7]" />
                 </div>
-                <span className="font-bold text-white uppercase">{item.text}</span>
-                <span className="bg-[#0B2545] text-[#8F1016] font-extrabold text-[10px] sm:text-xs px-2 py-0.5 rounded-md uppercase tracking-wider">
+                <span className="font-bold text-white uppercase tracking-wide">{item.text}</span>
+                <span className="bg-gradient-to-r from-amber-400 to-yellow-500 text-slate-950 font-black text-[10px] sm:text-xs px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-[0_2px_8px_rgba(245,158,11,0.25)]">
                   {item.highlight}
                 </span>
-                <span className="text-[#D61F26]/60 text-base font-bold ml-1">◆</span>
+                <span className="text-[#4FC3F7]/70 text-sm font-bold ml-1">✦</span>
               </div>
             );
           })}
