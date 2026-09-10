@@ -4,6 +4,8 @@ import Script from "next/script";
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/navigation/Footer";
 import FloatingCTA from "@/components/shared/FloatingCTA";
+import CookieConsent from "@/components/shared/CookieConsent";
+import { generateLocalBusinessSchema } from "@/utils/schema";
 import "./globals.css";
 
 const inter = Inter({
@@ -24,7 +26,7 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-import { generateLocalBusinessSchema } from "@/utils/schema";
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || "G-PIGEONGUARD";
 
 export const metadata: Metadata = {
   title: {
@@ -56,12 +58,13 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
-      { url: "/images/logo/pigeon-guard-icon.svg", type: "image/svg+xml" },
       { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
       { url: "/favicon.png", type: "image/png" },
     ],
-    shortcut: "/icon.svg",
-    apple: "/images/logo/pigeon-guard-icon.svg",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "Pigeon Guard Solutions | Safety Nets & Invisible Grills Andhra Pradesh",
@@ -100,6 +103,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         {/* Favicon fallback tags for all browsers & search engines */}
+        <link rel="icon" type="image/svg+xml" href="/icon.svg" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -109,6 +113,26 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased bg-white text-slate-900 flex flex-col min-h-screen selection:bg-sky-500 selection:text-white`}
       >
+        {/* Google Analytics 4 (GA4) Tracking Script */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+
         {/* LocalBusiness JSON-LD Schema */}
         <Script
           id="local-business-schema"
@@ -120,6 +144,7 @@ export default function RootLayout({
         <main className="flex-grow pt-[84px] sm:pt-[92px]">{children}</main>
         <Footer />
         <FloatingCTA />
+        <CookieConsent />
       </body>
     </html>
   );

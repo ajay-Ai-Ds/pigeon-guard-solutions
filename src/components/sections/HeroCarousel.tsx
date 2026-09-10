@@ -206,7 +206,9 @@ export default function HeroCarousel() {
                 sizes="100vw"
                 className="object-cover object-center transition-opacity duration-300"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0B2545]/90 via-[#0B2545]/50 to-black/20 pointer-events-none" />
+              {/* Subtle natural scrim to maximize image visibility while keeping text crisp & readable */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/30 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/15 pointer-events-none" />
             </div>
           </div>
         ))}

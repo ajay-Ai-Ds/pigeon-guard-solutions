@@ -28,7 +28,9 @@ export function ServiceHero({ name, categoryName, title, subtitle, aiOverview, i
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/40 to-black/30" />
+        {/* Subtle natural scrim for high image clarity and text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/45 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-black/20 pointer-events-none" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

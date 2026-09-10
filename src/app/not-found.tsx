@@ -7,13 +7,13 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center p-6 text-center select-none">
       <div className="max-w-md bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-md flex flex-col items-center gap-6">
-        <div className="p-4 bg-sky-50 text-[#4FC3F7] rounded-full shadow-xs border border-orange-100/50">
+        <div className="p-4 bg-sky-50 text-[#0288D1] rounded-full shadow-xs border border-sky-100">
           <ShieldAlert className="w-12 h-12" />
         </div>
 
         <div className="flex flex-col gap-2">
-          <h1 className="text-4xl font-extrabold text-slate-800 tracking-tight leading-none">404</h1>
-          <h2 className="text-lg font-bold text-slate-700">Safety Net Breach: Page Not Found</h2>
+          <h1 className="text-4xl font-extrabold text-[#0B2545] tracking-tight leading-none">404</h1>
+          <h2 className="text-lg font-bold text-slate-800">Safety Net Breach: Page Not Found</h2>
         </div>
 
         <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
@@ -22,7 +22,7 @@ export default function NotFound() {
 
         <Link
           href="/"
-          className="w-full flex items-center justify-center gap-2 bg-[#0B2545] hover:bg-[#4FC3F7] text-white font-bold py-3.5 rounded-xl transition-all shadow-xs text-xs"
+          className="w-full flex items-center justify-center gap-2 bg-[#0B2545] hover:bg-[#133E6F] text-white font-bold py-3.5 rounded-xl transition-all shadow-xs text-xs"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Return to Safety (Home)</span>

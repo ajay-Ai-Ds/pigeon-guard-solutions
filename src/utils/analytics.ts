@@ -25,7 +25,7 @@ function pushToDataLayer(obj: DataLayerObject) {
 
 export function trackPhoneClick(location: string) {
   pushToDataLayer({
-    event: "shyam_phone_click",
+    event: "pigeon_guard_phone_click",
     category: "CTA Clicks",
     action: "Call Action Initiated",
     label: location,
@@ -34,7 +34,7 @@ export function trackPhoneClick(location: string) {
 
 export function trackWhatsAppClick(location: string) {
   pushToDataLayer({
-    event: "shyam_whatsapp_click",
+    event: "pigeon_guard_whatsapp_click",
     category: "CTA Clicks",
     action: "WhatsApp Chat Initiated",
     label: location,
@@ -43,7 +43,7 @@ export function trackWhatsAppClick(location: string) {
 
 export function trackFormSubmit(service: string, area: string) {
   pushToDataLayer({
-    event: "shyam_form_submit",
+    event: "pigeon_guard_form_submit",
     category: "Form Actions",
     action: "Lead Form Submission",
     label: `Service: ${service} | Area: ${area}`,
@@ -52,7 +52,7 @@ export function trackFormSubmit(service: string, area: string) {
 
 export function trackQuoteRequest(service: string, source: string) {
   pushToDataLayer({
-    event: "shyam_quote_request",
+    event: "pigeon_guard_quote_request",
     category: "Form Actions",
     action: "Quote Requested",
     label: `Service: ${service} | Source: ${source}`,
@@ -61,7 +61,7 @@ export function trackQuoteRequest(service: string, source: string) {
 
 export function trackScrollDepth(depthPercentage: number) {
   pushToDataLayer({
-    event: "shyam_scroll_depth",
+    event: "pigeon_guard_scroll_depth",
     category: "User Behavior",
     action: "Page Scroll Depth",
     label: `${depthPercentage}% Scroll`,
