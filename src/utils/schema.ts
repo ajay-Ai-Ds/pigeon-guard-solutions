@@ -67,7 +67,7 @@ export function generateLocalBusinessSchema(areaName?: string) {
       ? `https://pigeonguardsolutions.com/areas/${areaName.toLowerCase().replace(/\s+/g, "-")}`
       : "https://pigeonguardsolutions.com",
     "telephone": ["+91 93912 03122", "+91 81435 13322"],
-    "email": "pigeonguardsolutions@gmail.com",
+    "email": "info.pigeonguardsolutions@gmail.com",
     "image": "https://pigeonguardsolutions.com/images/og-image.webp",
     "logo": "https://pigeonguardsolutions.com/images/logo/pigeon-guard-icon.svg",
     "priceRange": "$$",
@@ -186,7 +186,7 @@ export function generateServiceSchema(serviceName: string, categoryName: string,
       "@type": ["HomeAndConstructionBusiness", "LocalBusiness"],
       "name": "Pigeon Guard Solutions",
       "telephone": ["+91 93912 03122", "+91 81435 13322"],
-      "email": "pigeonguardsolutions@gmail.com",
+      "email": "info.pigeonguardsolutions@gmail.com",
       "image": "https://pigeonguardsolutions.com/images/og-image.webp",
       "priceRange": "$$",
       "address": {

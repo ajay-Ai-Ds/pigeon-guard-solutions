@@ -229,8 +229,8 @@ export default function PrivacyPolicyPage() {
                   </div>
                   <div>
                     <span className="text-slate-400 block">Email Inquiries</span>
-                    <a href="mailto:pigeonguardsolutions@gmail.com" className="font-bold text-white hover:text-sky-300">
-                      pigeonguardsolutions@gmail.com
+                    <a href="mailto:info.pigeonguardsolutions@gmail.com" className="font-bold text-white hover:text-sky-300">
+                      info.pigeonguardsolutions@gmail.com
                     </a>
                   </div>
                 </div>

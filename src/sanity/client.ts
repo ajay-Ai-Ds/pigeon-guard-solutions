@@ -94,7 +94,7 @@ export async function fetchSiteSettings() {
       businessName: "Pigeon Guard Solutions",
       phone: "+91 93912 03122",
       secondaryPhone: "+91 81435 13322",
-      email: "pigeonguardsolutions@gmail.com",
+      email: "info.pigeonguardsolutions@gmail.com",
       showNewsletter: true,
       socialLinks: {
         facebook: "https://facebook.com/pigeonguardsolutions",
@@ -117,7 +117,7 @@ export async function fetchSiteSettings() {
       businessName: "Pigeon Guard Solutions",
       phone: "+91 93912 03122",
       secondaryPhone: "+91 81435 13322",
-      email: "pigeonguardsolutions@gmail.com",
+      email: "info.pigeonguardsolutions@gmail.com",
       showNewsletter: true,
       socialLinks: {
         facebook: "https://facebook.com/pigeonguardsolutions",

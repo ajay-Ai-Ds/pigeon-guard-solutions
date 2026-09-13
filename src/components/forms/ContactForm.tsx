@@ -141,7 +141,7 @@ export default function ContactForm() {
               </div>
 
               <a
-                href="mailto:pigeonguardsolutions@gmail.com"
+                href="mailto:info.pigeonguardsolutions@gmail.com"
                 className="flex items-center gap-4 bg-white/10 backdrop-blur-xs p-5 rounded-2xl border border-white/10 hover:border-[#4FC3F7]/50 hover:shadow-md transition-all group"
               >
                 <div className="p-3 bg-[#4FC3F7] text-[#0B2545] rounded-xl shrink-0 group-hover:bg-[#38b6ef] transition-colors duration-300">
@@ -152,7 +152,7 @@ export default function ContactForm() {
                     Email Inquiry
                   </span>
                   <span className="text-sm sm:text-base font-bold text-white group-hover:text-[#4FC3F7] transition-colors truncate block max-w-[240px] sm:max-w-none">
-                    pigeonguardsolutions@gmail.com
+                    info.pigeonguardsolutions@gmail.com
                   </span>
                 </div>
               </a>

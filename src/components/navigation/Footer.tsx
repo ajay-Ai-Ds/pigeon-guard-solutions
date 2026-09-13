@@ -117,8 +117,8 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-[#4FC3F7] shrink-0 mt-1" />
                 <div>
                   <span className="font-bold text-white block">Email</span>
-                  <a href="mailto:pigeonguardsolutions@gmail.com" className="hover:text-[#4FC3F7] transition-colors">
-                    pigeonguardsolutions@gmail.com
+                  <a href="mailto:info.pigeonguardsolutions@gmail.com" className="hover:text-[#4FC3F7] transition-colors">
+                    info.pigeonguardsolutions@gmail.com
                   </a>
                 </div>
               </li>

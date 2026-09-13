@@ -224,8 +224,8 @@ export default function TermsAndConditionsPage() {
                   </div>
                   <div>
                     <span className="text-slate-400 block">Support Email</span>
-                    <a href="mailto:pigeonguardsolutions@gmail.com" className="font-bold text-white hover:text-emerald-300">
-                      pigeonguardsolutions@gmail.com
+                    <a href="mailto:info.pigeonguardsolutions@gmail.com" className="font-bold text-white hover:text-emerald-300">
+                      info.pigeonguardsolutions@gmail.com
                     </a>
                   </div>
                 </div>

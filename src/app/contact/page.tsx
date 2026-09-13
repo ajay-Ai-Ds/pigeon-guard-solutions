@@ -114,8 +114,8 @@ export default function ContactPage() {
                 <Mail className="w-5 h-5 text-[#4FC3F7] shrink-0 mt-0.5" />
                 <div className="flex flex-col gap-0.5">
                   <span className="text-[10px] uppercase font-bold text-slate-500">Email Address</span>
-                  <a href="mailto:pigeonguardsolutions@gmail.com" className="text-sm font-bold text-slate-700 hover:text-[#4FC3F7] transition-colors">
-                    pigeonguardsolutions@gmail.com
+                  <a href="mailto:info.pigeonguardsolutions@gmail.com" className="text-sm font-bold text-slate-700 hover:text-[#4FC3F7] transition-colors">
+                    info.pigeonguardsolutions@gmail.com
                   </a>
                 </div>
               </div>
