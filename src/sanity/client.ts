@@ -92,7 +92,7 @@ export async function fetchSiteSettings() {
   if (isMock) {
     return {
       businessName: "Pigeon Guard Solutions",
-      phone: "+91 93927 99311",
+      phone: "+91 93912 03122",
       secondaryPhone: "+91 81435 13322",
       email: "pigeonguardsolutions@gmail.com",
       showNewsletter: true,
@@ -115,7 +115,7 @@ export async function fetchSiteSettings() {
   } catch {
     return {
       businessName: "Pigeon Guard Solutions",
-      phone: "+91 93927 99311",
+      phone: "+91 93912 03122",
       secondaryPhone: "+91 81435 13322",
       email: "pigeonguardsolutions@gmail.com",
       showNewsletter: true,

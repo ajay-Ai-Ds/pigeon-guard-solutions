@@ -118,12 +118,12 @@ export default function Navbar() {
           {/* Left: Phone numbers */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <a
-              href="tel:+919392799311"
+              href="tel:+919391203122"
               className="flex items-center gap-1.5 hover:text-[#4FC3F7] transition-colors"
               aria-label="Call Primary Phone"
             >
               <Phone className="w-3.5 h-3.5 text-[#4FC3F7]" />
-              <span className="font-bold text-xs sm:text-sm text-white">+91 93927 99311</span>
+              <span className="font-bold text-xs sm:text-sm text-white">+91 93912 03122</span>
             </a>
             <span className="text-slate-500 hidden md:inline">|</span>
             <a
@@ -144,7 +144,7 @@ export default function Navbar() {
           {/* Right: Email & Mobile WhatsApp Badge */}
           <div className="flex items-center gap-2 sm:gap-4 shrink-0">
             <a
-              href="https://wa.me/919392799311?text=Hi%20Pigeon%20Guard%20Solutions%2C%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20safety%20nets%2Finvisible%20grills."
+              href="https://wa.me/919391203122?text=Hi%20Pigeon%20Guard%20Solutions%2C%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20safety%20nets%2Finvisible%20grills."
               target="_blank"
               rel="noopener noreferrer"
               className="flex sm:hidden items-center gap-1 bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#25D366] px-2.5 py-0.5 rounded border border-[#25D366]/40 text-[11px] font-bold transition-all"
@@ -338,7 +338,7 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-3">
               {/* Call Now Button (Sky Blue) */}
               <a
-                href="tel:+919392799311"
+                href="tel:+919391203122"
                 className="bg-[#4FC3F7] hover:bg-[#38b6ef] text-[#0B2545] font-extrabold flex items-center gap-2 px-5 py-2.5 rounded-full text-xs shadow-md transition-all"
                 aria-label="Call Now"
               >
@@ -348,7 +348,7 @@ export default function Navbar() {
 
               {/* WhatsApp Button (WhatsApp Green) */}
               <a
-                href="https://wa.me/919392799311?text=Hi%20Pigeon%20Guard%20Solutions%2C%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20safety%20nets%2Finvisible%20grills."
+                href="https://wa.me/919391203122?text=Hi%20Pigeon%20Guard%20Solutions%2C%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20safety%20nets%2Finvisible%20grills."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold px-4 py-2.5 rounded-full shadow-md transition-all text-xs"
@@ -441,11 +441,11 @@ export default function Navbar() {
               {/* Mobile Actions */}
               <div className="pt-4 border-t border-[#E5E7EB] flex flex-col gap-2.5">
                 <a
-                  href="tel:+919392799311"
+                  href="tel:+919391203122"
                   className="bg-[#4FC3F7] hover:bg-[#38b6ef] text-[#0B2545] py-3 text-center rounded-full text-sm font-extrabold flex items-center justify-center gap-2 shadow-md transition-all"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>Call +91 93927 99311 (Primary)</span>
+                  <span>Call +91 93912 03122 (Primary)</span>
                 </a>
                 <a
                   href="tel:+918143513322"
@@ -455,7 +455,7 @@ export default function Navbar() {
                   <span>Call +91 81435 13322 (Alt)</span>
                 </a>
                 <a
-                  href="https://wa.me/919392799311?text=Hi%20Pigeon%20Guard%20Solutions%2C%20I%20would%20like%20to%20request%20a%20free%20quote."
+                  href="https://wa.me/919391203122?text=Hi%20Pigeon%20Guard%20Solutions%2C%20I%20would%20like%20to%20request%20a%20free%20quote."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#25D366] text-white py-3 text-center rounded-full text-sm font-extrabold flex items-center justify-center gap-2"

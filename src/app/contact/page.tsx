@@ -8,14 +8,14 @@ import ContactForm from "@/components/forms/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us | Pigeon Guard Solutions - Safety Nets & Invisible Grills Andhra Pradesh",
   description:
-    "Contact Pigeon Guard Solutions for free site measurement & instant quotes in Andhra Pradesh across Vijayawada, Guntur, Ongole, Nellore, Tirupathi, Visakhapatnam, and Rajahmundry. Call +91 93927 99311.",
+    "Contact Pigeon Guard Solutions for free site measurement & instant quotes in Andhra Pradesh across Vijayawada, Guntur, Ongole, Nellore, Tirupathi, Visakhapatnam, and Rajahmundry. Call +91 93912 03122.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
     title: "Contact Us | Pigeon Guard Solutions - Safety Nets & Invisible Grills Andhra Pradesh",
     description:
-      "Contact Pigeon Guard Solutions for free site measurement & instant quotes in Andhra Pradesh across Vijayawada, Guntur, Ongole, Nellore, Tirupathi, Visakhapatnam, and Rajahmundry. Call +91 93927 99311.",
+      "Contact Pigeon Guard Solutions for free site measurement & instant quotes in Andhra Pradesh across Vijayawada, Guntur, Ongole, Nellore, Tirupathi, Visakhapatnam, and Rajahmundry. Call +91 93912 03122.",
     url: "https://pigeonguardsolutions.com/contact",
     images: [
       {
@@ -98,8 +98,8 @@ export default function ContactPage() {
                 <Phone className="w-5 h-5 text-[#4FC3F7] shrink-0 mt-0.5" />
                 <div className="flex flex-col gap-1">
                   <span className="text-[10px] uppercase font-bold text-slate-500">Phone Numbers</span>
-                  <a href="tel:+919392799311" className="text-sm font-bold text-slate-700 hover:text-[#4FC3F7] transition-colors flex items-center gap-2">
-                    <span>+91 93927 99311</span>
+                  <a href="tel:+919391203122" className="text-sm font-bold text-slate-700 hover:text-[#4FC3F7] transition-colors flex items-center gap-2">
+                    <span>+91 93912 03122</span>
                     <span className="text-[10px] bg-sky-100 text-[#4FC3F7] px-1.5 py-0.5 rounded font-bold">Primary</span>
                   </a>
                   <a href="tel:+918143513322" className="text-sm font-bold text-slate-700 hover:text-[#4FC3F7] transition-colors flex items-center gap-2">

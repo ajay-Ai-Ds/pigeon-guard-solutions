@@ -191,7 +191,7 @@ export default function CostCalculator() {
             {/* Direct Action Buttons */}
             <div className="space-y-3 pt-2">
               <a
-                href={`https://wa.me/919392799311?text=${whatsappMessage}`}
+                href={`https://wa.me/919391203122?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold py-3.5 px-6 rounded-full flex items-center justify-center gap-2.5 shadow-lg text-sm sm:text-base transition-all transform hover:-translate-y-0.5"
@@ -201,11 +201,11 @@ export default function CostCalculator() {
               </a>
 
               <a
-                href="tel:+919392799311"
+                href="tel:+919391203122"
                 className="w-full bg-white hover:bg-slate-100 text-[#0B2545] font-extrabold py-3.5 px-6 rounded-full flex items-center justify-center gap-2.5 shadow-lg text-sm sm:text-base transition-all transform hover:-translate-y-0.5"
               >
                 <PhoneCall className="w-5 h-5 text-[#0B2545]" />
-                <span>Call Specialist Now (+91 93927 99311)</span>
+                <span>Call Specialist Now (+91 93912 03122)</span>
               </a>
             </div>
 

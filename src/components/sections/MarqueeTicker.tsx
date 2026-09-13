@@ -10,7 +10,7 @@ const marqueeItems = [
   { icon: Award, text: "12+ Years Industry Experience", highlight: "5,000+ Projects" },
   { icon: Zap, text: "Free Doorstep Site Measurement & Estimate", highlight: "Same Day Visit" },
   { icon: CheckCircle2, text: "3 to 5 Years Warranty on All Installations", highlight: "High-Rise Certified" },
-  { icon: PhoneCall, text: "Instant WhatsApp & Direct Support", highlight: "+91 93927 99311 / +91 81435 13322" },
+  { icon: PhoneCall, text: "Instant WhatsApp & Direct Support", highlight: "+91 93912 03122 / +91 81435 13322" },
 ];
 
 export default function MarqueeTicker() {

@@ -44,7 +44,7 @@ export function generateOrganizationSchema() {
     "image": "https://pigeonguardsolutions.com/images/og-image.webp",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": ["+91 93927 99311", "+91 81435 13322"],
+      "telephone": ["+91 93912 03122", "+91 81435 13322"],
       "contactType": "customer service",
       "areaServed": "IN",
       "availableLanguage": ["English", "Telugu", "Hindi"],
@@ -65,7 +65,7 @@ export function generateLocalBusinessSchema(areaName?: string) {
     "url": areaName
       ? `https://pigeonguardsolutions.com/areas/${areaName.toLowerCase().replace(/\s+/g, "-")}`
       : "https://pigeonguardsolutions.com",
-    "telephone": ["+91 93927 99311", "+91 81435 13322"],
+    "telephone": ["+91 93912 03122", "+91 81435 13322"],
     "email": "pigeonguardsolutions@gmail.com",
     "image": "https://pigeonguardsolutions.com/images/og-image.webp",
     "logo": "https://pigeonguardsolutions.com/images/logo/pigeon-guard-icon.svg",
@@ -184,7 +184,7 @@ export function generateServiceSchema(serviceName: string, categoryName: string,
     "provider": {
       "@type": ["HomeAndConstructionBusiness", "LocalBusiness"],
       "name": "Pigeon Guard Solutions",
-      "telephone": ["+91 93927 99311", "+91 81435 13322"],
+      "telephone": ["+91 93912 03122", "+91 81435 13322"],
       "email": "pigeonguardsolutions@gmail.com",
       "image": "https://pigeonguardsolutions.com/images/og-image.webp",
       "priceRange": "$$",

@@ -258,15 +258,15 @@ export default function PricingPage() {
 
           <div className="flex flex-wrap justify-center items-center gap-4 mt-2 w-full max-w-md">
             <a
-              href="tel:+919392799311"
+              href="tel:+919391203122"
               className="flex-1 min-w-[180px] flex items-center justify-center gap-2.5 bg-[#4FC3F7] hover:bg-[#38b6ef] text-[#0B2545] font-black py-4 px-6 rounded-full shadow-lg hover:shadow-xl transition-all text-sm"
             >
               <Phone className="w-4 h-4" />
-              <span>Call +91 93927 99311</span>
+              <span>Call +91 93912 03122</span>
             </a>
 
             <a
-              href="https://wa.me/919392799311?text=Hi%20Pigeon%20Guard%20Solutions%2C%20I%20would%20like%20to%20request%20a%20free%20on-site%20measurement%20and%20pricing%20quote."
+              href="https://wa.me/919391203122?text=Hi%20Pigeon%20Guard%20Solutions%2C%20I%20would%20like%20to%20request%20a%20free%20on-site%20measurement%20and%20pricing%20quote."
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 min-w-[180px] flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-4 px-6 rounded-full shadow-lg hover:shadow-xl transition-all text-sm"

@@ -218,8 +218,8 @@ export default function PrivacyPolicyPage() {
                   </div>
                   <div>
                     <span className="text-slate-400 block">Helpline</span>
-                    <a href="tel:+919392799311" className="font-bold text-white hover:text-sky-300">
-                      +91 93927 99311
+                    <a href="tel:+919391203122" className="font-bold text-white hover:text-sky-300">
+                      +91 93912 03122
                     </a>
                   </div>
                 </div>

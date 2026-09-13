@@ -106,7 +106,7 @@ export default function QuickLeadForm({
           </p>
           <div className="pt-2">
             <a
-              href={`https://wa.me/919392799311?text=Hi%20Pigeon%20Guard,%20I%20just%20submitted%20a%20request%20for%20${encodeURIComponent(
+              href={`https://wa.me/919391203122?text=Hi%20Pigeon%20Guard,%20I%20just%20submitted%20a%20request%20for%20${encodeURIComponent(
                 serviceName
               )}%20in%20${encodeURIComponent(cityName)}.`}
               target="_blank"
@@ -176,7 +176,7 @@ export default function QuickLeadForm({
           {/* Error notice */}
           {status === "error" && (
             <p className="text-xs text-rose-600 bg-rose-50 p-2.5 rounded-lg border border-rose-100">
-              There was an issue sending your inquiry. Please call us directly at <strong>+91 93927 99311</strong>.
+              There was an issue sending your inquiry. Please call us directly at <strong>+91 93912 03122</strong>.
             </p>
           )}
 

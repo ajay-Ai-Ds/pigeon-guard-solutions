@@ -66,15 +66,15 @@ export function ServiceHero({ name, categoryName, title, subtitle, aiOverview, i
             {/* Primary Action Buttons */}
             <div className="flex flex-wrap gap-4 mt-4 w-full sm:w-auto">
               <a
-                href="tel:+91 93927 99311"
+                href="tel:+91 93912 03122"
                 className="w-full sm:w-auto flex items-center justify-center gap-2.5 bg-[#4FC3F7] text-white font-bold px-6 py-4 rounded-full hover:bg-accent-hover transition-colors shadow-lg hover:shadow-xl text-sm"
               >
                 <Phone className="w-4 h-4" />
-                <span>Call +91 93927 99311</span>
+                <span>Call +91 93912 03122</span>
               </a>
 
               <a
-                href="https://wa.me/919392799311?text=Hi%20Pigeon%20Guard%2C%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20safety%20nets%2Finvisible%20grills."
+                href="https://wa.me/919391203122?text=Hi%20Pigeon%20Guard%2C%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20safety%20nets%2Finvisible%20grills."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto flex items-center justify-center gap-2.5 bg-emerald-600 text-white font-bold px-6 py-4 rounded-full hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-xl text-sm"
@@ -132,7 +132,7 @@ export function ServiceStickyBar({ name }: { name: string }) {
 
             <div className="flex items-center gap-3 w-full md:w-auto">
               <a
-                href="tel:+91 93927 99311"
+                href="tel:+91 93912 03122"
                 className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-[#4FC3F7] text-white font-bold px-5 py-3 rounded-full hover:bg-accent-hover text-xs sm:text-sm shadow-xs transition-colors"
               >
                 <Phone className="w-3.5 h-3.5" />
@@ -140,7 +140,7 @@ export function ServiceStickyBar({ name }: { name: string }) {
               </a>
 
               <a
-                href="https://wa.me/919392799311?text=Hi%20Pigeon%20Guard%2C%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20safety%20nets%2Finvisible%20grills."
+                href="https://wa.me/919391203122?text=Hi%20Pigeon%20Guard%2C%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20safety%20nets%2Finvisible%20grills."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-emerald-600 text-white font-bold px-5 py-3 rounded-full hover:bg-emerald-700 text-xs sm:text-sm shadow-xs transition-colors"

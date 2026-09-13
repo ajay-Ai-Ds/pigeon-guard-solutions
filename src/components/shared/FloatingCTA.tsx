@@ -46,7 +46,7 @@ export default function FloatingCTA() {
 
       {/* Direct Call Button (Sky Blue) */}
       <motion.a
-        href="tel:+919392799311"
+        href="tel:+919391203122"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.4, delay: 0.2 }}
@@ -57,14 +57,14 @@ export default function FloatingCTA() {
       >
         <Phone className="w-6 h-6 text-[#0B2545]" />
         <span className="absolute right-16 bg-[#0B2545] text-white text-xs font-semibold px-3 py-1.5 rounded-md shadow-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-          Call +91 93927 99311
+          Call +91 93912 03122
         </span>
         <span className="absolute inset-0 w-full h-full rounded-full bg-[#4FC3F7] animate-ping opacity-30 -z-10 group-hover:hidden"></span>
       </motion.a>
 
       {/* WhatsApp Button (Official WhatsApp Green #25D366) */}
       <motion.a
-        href="https://wa.me/919392799311?text=Hi%20Pigeon%20Guard%20Solutions%2C%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20safety%20nets%2Finvisible%20grills."
+        href="https://wa.me/919391203122?text=Hi%20Pigeon%20Guard%20Solutions%2C%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20safety%20nets%2Finvisible%20grills."
         target="_blank"
         rel="noopener noreferrer"
         initial={{ scale: 0.8, opacity: 0 }}

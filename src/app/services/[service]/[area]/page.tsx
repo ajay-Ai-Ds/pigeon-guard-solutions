@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: PageProps) {
   }
 
   const title = `${serviceDetail.name} in ${areaDetail.name} | Free Inspection & Same-Day Service - Pigeon Guard Solutions`;
-  const description = `Get expert ${serviceDetail.name} installation in ${areaDetail.name}, Andhra Pradesh. UV-treated virgin HDPE mesh, SS316 marine-grade invisible grills, 5-year warranty, and free doorstep measurement across ${areaDetail.localities.slice(0, 5).join(", ")}. Call +91 93927 99311.`;
+  const description = `Get expert ${serviceDetail.name} installation in ${areaDetail.name}, Andhra Pradesh. UV-treated virgin HDPE mesh, SS316 marine-grade invisible grills, 5-year warranty, and free doorstep measurement across ${areaDetail.localities.slice(0, 5).join(", ")}. Call +91 93912 03122.`;
 
   return {
     title,
@@ -253,14 +253,14 @@ export default async function ServiceLocationPage({ params }: PageProps) {
               {/* Instant Call & WhatsApp CTAs */}
               <div className="flex flex-wrap items-center gap-3 pt-4">
                 <a
-                  href="tel:+919392799311"
+                  href="tel:+919391203122"
                   className="flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-[#0288D1] to-[#01579B] hover:from-[#039BE5] hover:to-[#0288D1] text-white font-extrabold text-sm rounded-2xl shadow-xl shadow-sky-950/40 hover:scale-[1.02] transition-transform"
                 >
                   <Phone className="w-4 h-4 animate-bounce" />
-                  <span>Call Now: +91 93927 99311</span>
+                  <span>Call Now: +91 93912 03122</span>
                 </a>
                 <a
-                  href={`https://wa.me/919392799311?text=${whatsappMessage}`}
+                  href={`https://wa.me/919391203122?text=${whatsappMessage}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 px-6 py-3.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-extrabold text-sm rounded-2xl shadow-xl shadow-emerald-950/30 hover:scale-[1.02] transition-transform"
@@ -560,14 +560,14 @@ export default async function ServiceLocationPage({ params }: PageProps) {
       {/* Sticky Mobile Bottom Conversion Bar */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-t border-slate-800 p-3 flex items-center gap-2 shadow-2xl">
         <a
-          href="tel:+919392799311"
+          href="tel:+919391203122"
           className="flex-1 py-3 px-3 bg-[#0288D1] text-white text-xs font-extrabold rounded-xl flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-transform"
         >
           <Phone className="w-4 h-4" />
-          <span>Call: 9392799311</span>
+          <span>Call: 9391203122</span>
         </a>
         <a
-          href={`https://wa.me/919392799311?text=${whatsappMessage}`}
+          href={`https://wa.me/919391203122?text=${whatsappMessage}`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 py-3 px-3 bg-[#25D366] text-white text-xs font-extrabold rounded-xl flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-transform"

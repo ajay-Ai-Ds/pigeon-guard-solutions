@@ -40,11 +40,11 @@ export default function ThankYouPage() {
           </span>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
             <a
-              href="tel:+919392799311"
+              href="tel:+919391203122"
               className="flex items-center justify-center gap-1.5 bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer"
             >
               <Phone className="w-3.5 h-3.5 text-[#4FC3F7]" />
-              <span>Call: 9392799311</span>
+              <span>Call: 9391203122</span>
             </a>
             <a
               href="tel:+918143513322"
@@ -54,7 +54,7 @@ export default function ThankYouPage() {
               <span>Alt: 8143513322</span>
             </a>
             <a
-              href="https://wa.me/919392799311?text=Hi%20Pigeon%20Guard%2C%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20safety%20nets%2Finvisible%20grills."
+              href="https://wa.me/919391203122?text=Hi%20Pigeon%20Guard%2C%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20safety%20nets%2Finvisible%20grills."
               className="flex items-center justify-center gap-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer"
             >
               <MessageSquare className="w-3.5 h-3.5 fill-current" />

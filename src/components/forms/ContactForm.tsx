@@ -128,8 +128,8 @@ export default function ContactForm() {
                     Direct Phone / Call Booking
                   </span>
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                    <a href="tel:+919392799311" className="text-sm sm:text-base font-bold text-white hover:text-[#4FC3F7] transition-colors">
-                      +91 93927 99311 <span className="text-[10px] font-normal text-slate-300">(Primary)</span>
+                    <a href="tel:+919391203122" className="text-sm sm:text-base font-bold text-white hover:text-[#4FC3F7] transition-colors">
+                      +91 93912 03122 <span className="text-[10px] font-normal text-slate-300">(Primary)</span>
                     </a>
                     <span className="text-slate-400">|</span>
                     <a href="tel:+918143513322" className="text-sm sm:text-base font-bold text-slate-200 hover:text-[#4FC3F7] transition-colors">

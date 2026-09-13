@@ -80,7 +80,7 @@ function generateFAQsForService(serviceName: string, category: string): FAQItem[
     },
     {
       question: `How do we contact Pigeon Guard Solutions for booking?`,
-      answer: "You can book a free measurement session by calling us directly at +91 93927 99311, sending a message on WhatsApp, or submitting our contact request form.",
+      answer: "You can book a free measurement session by calling us directly at +91 93912 03122, sending a message on WhatsApp, or submitting our contact request form.",
     },
   ];
 }

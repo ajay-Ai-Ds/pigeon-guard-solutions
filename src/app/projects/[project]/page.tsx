@@ -174,7 +174,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
               {/* Call support direct trigger */}
               <div className="pt-2">
                 <a
-                  href="tel:+91 93927 99311"
+                  href="tel:+91 93912 03122"
                   className="w-full flex items-center justify-center gap-2.5 bg-[#4FC3F7] hover:bg-accent-hover text-white font-bold py-3.5 rounded-xl transition-colors text-xs shadow-xs"
                 >
                   Request Similar Installation

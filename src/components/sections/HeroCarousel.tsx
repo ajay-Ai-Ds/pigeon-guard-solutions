@@ -245,16 +245,16 @@ export default function HeroCarousel() {
               <div className="flex flex-wrap gap-2.5 sm:gap-4 mt-1 sm:mt-2">
                 {/* Call Button */}
                 <a
-                  href="tel:+91 93927 99311"
+                  href="tel:+91 93912 03122"
                   className="bg-[#4FC3F7] hover:bg-[#38b6ef] text-[#0B2545] font-extrabold rounded-full flex items-center gap-2 font-extrabold px-6 py-3.5 text-xs sm:text-sm shadow-xl"
                 >
                   <Phone className="w-4 h-4 fill-white/10" />
-                  <span>Call +91 93927 99311</span>
+                  <span>Call +91 93912 03122</span>
                 </a>
 
                 {/* WhatsApp Button */}
                 <a
-                  href="https://wa.me/919392799311?text=Hi%20Pigeon%20Guard%20Solutions%2C%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20safety%20nets%2Finvisible%20grills."
+                  href="https://wa.me/919391203122?text=Hi%20Pigeon%20Guard%20Solutions%2C%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20safety%20nets%2Finvisible%20grills."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-[#25D366] text-white font-extrabold px-6 py-3.5 rounded-full hover:bg-[#20bd5a] transition-all shadow-xl text-xs sm:text-sm"

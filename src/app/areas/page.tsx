@@ -139,10 +139,10 @@ export default function AreasPage() {
                 </p>
               </div>
               <a
-                href="tel:+919392799311"
+                href="tel:+919391203122"
                 className="bg-[#4FC3F7] hover:bg-[#38b6ef] text-[#0B2545] font-black shrink-0 px-6 py-3.5 text-xs rounded-full flex items-center gap-2 shadow-lg transition-all"
               >
-                <span>Call +91 93927 99311</span>
+                <span>Call +91 93912 03122</span>
               </a>
             </div>
           </div>
@@ -177,10 +177,10 @@ export default function AreasPage() {
 
               <div className="pt-2 flex flex-col gap-2">
                 <a
-                  href="tel:+919392799311"
+                  href="tel:+919391203122"
                   className="w-full flex items-center justify-center gap-2 bg-[#4FC3F7] hover:bg-[#38b6ef] text-[#0B2545] font-black py-3.5 rounded-xl transition-all text-xs shadow-md"
                 >
-                  Call Primary: +91 93927 99311
+                  Call Primary: +91 93912 03122
                 </a>
                 <a
                   href="tel:+918143513322"

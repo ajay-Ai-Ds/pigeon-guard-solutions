@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: PageProps) {
   }
 
   const title = `Safety Nets & Invisible Grills in ${areaDetail.name} | Pigeon Guard Solutions Andhra Pradesh`;
-  const description = `Pigeon Guard Solutions provides professional balcony safety nets, pigeon netting, and SS316 invisible grills in ${areaDetail.name}, Andhra Pradesh. Free doorstep inspection across ${areaDetail.localities.slice(0, 5).join(", ")}. Call +91 93927 99311.`;
+  const description = `Pigeon Guard Solutions provides professional balcony safety nets, pigeon netting, and SS316 invisible grills in ${areaDetail.name}, Andhra Pradesh. Free doorstep inspection across ${areaDetail.localities.slice(0, 5).join(", ")}. Call +91 93912 03122.`;
 
   return {
     title,
@@ -167,14 +167,14 @@ export default async function AreaDetailPage({ params }: PageProps) {
             {/* CTAs */}
             <div className="flex flex-wrap gap-3 pt-2">
               <a
-                href="tel:+919392799311"
+                href="tel:+919391203122"
                 className="flex items-center justify-center gap-2 bg-[#4FC3F7] text-slate-900 font-extrabold px-6 py-3 rounded-full hover:bg-sky-300 text-xs shadow-lg transition-transform hover:scale-105"
               >
                 <Phone className="w-4 h-4" />
-                <span>Call +91 93927 99311</span>
+                <span>Call +91 93912 03122</span>
               </a>
               <a
-                href={`https://wa.me/919392799311?text=${whatsappMessage}`}
+                href={`https://wa.me/919391203122?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-[#25D366] text-white font-extrabold px-6 py-3 rounded-full hover:bg-[#1EBE5D] text-xs shadow-lg transition-transform hover:scale-105"

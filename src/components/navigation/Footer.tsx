@@ -103,8 +103,8 @@ export default function Footer() {
                 <Phone className="w-4 h-4 text-[#4FC3F7] shrink-0 mt-1" />
                 <div className="flex flex-col gap-1">
                   <span className="font-bold text-white block">Phone Numbers</span>
-                  <a href="tel:+919392799311" className="hover:text-[#4FC3F7] transition-colors text-white font-semibold flex items-center gap-1.5">
-                    <span>+91 93927 99311</span>
+                  <a href="tel:+919391203122" className="hover:text-[#4FC3F7] transition-colors text-white font-semibold flex items-center gap-1.5">
+                    <span>+91 93912 03122</span>
                     <span className="text-[10px] bg-[#4FC3F7]/20 text-[#4FC3F7] px-1.5 py-0.2 rounded font-bold">Primary</span>
                   </a>
                   <a href="tel:+918143513322" className="hover:text-[#4FC3F7] transition-colors text-[#D1D5DB] font-semibold flex items-center gap-1.5">
