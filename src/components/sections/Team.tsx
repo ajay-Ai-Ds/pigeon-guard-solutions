@@ -38,7 +38,7 @@ const teamWorkGallery: GalleryItem[] = [
   },
   {
     id: 6,
-    image: "/images/materials/BoxCricketnet.jpeg",
+    image: "/images/main-images/cricketpracticenet-Pigeon-Guard.jpg",
     caption: "Sports Turf & Box Cricket Enclosure Setup",
   },
 ];

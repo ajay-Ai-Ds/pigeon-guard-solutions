@@ -64,7 +64,7 @@ const slides: Slide[] = [
   },
   {
     id: 6,
-    image: "/images/materials/BoxCricketnet.jpeg",
+    image: "/images/main-images/cricketpracticenet-Pigeon-Guard.jpg",
     badge: "Sports Nets",
     title: "Heavy-Duty Sports Nets & Box Cricket Enclosures",
     subtitle: "Durable, UV-treated sports practice netting for terrace cricket pitches, football turf enclosures, and sports academies across Andhra Pradesh.",

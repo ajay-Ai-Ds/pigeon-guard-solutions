@@ -48,7 +48,7 @@ const materials: Material[] = [
   {
     id: 4,
     name: "Cricket & Sports Practice Netting",
-    image: "/images/materials/BoxCricketnet.jpeg",
+    image: "/images/main-images/cricketpracticenet-Pigeon-Guard.jpg",
     specs: [
       "15-ply to 30-ply heavy cord thickness",
       "High-impact ball shock absorption",
