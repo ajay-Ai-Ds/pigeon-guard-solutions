@@ -92,7 +92,7 @@ export default function SafetyNetsCategoryPage() {
             Primary Division
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight leading-tight">
-            Safety Nets (9 Services)
+            Safety Nets ({categoryServices.length} Services)
           </h1>
           <p className="text-slate-500 text-sm sm:text-base leading-relaxed">
             Protect your family, pets, and structures with high-density copolymer netting. Designed for Andhra Pradesh&apos;s weather and custom anchored to meet absolute safety benchmarks.

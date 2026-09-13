@@ -24,6 +24,8 @@ interface ServiceOption {
 const serviceOptions: ServiceOption[] = [
   { id: "balcony-net", name: "Balcony Safety Nets (HDPE)", pricePerSqFt: 18, unit: "sq. ft.", warranty: "5 Years" },
   { id: "pigeon-net", name: "Pigeon & Anti-Bird Nets", pricePerSqFt: 16, unit: "sq. ft.", warranty: "5 Years" },
+  { id: "mosquito-net", name: "Mosquito Safety Nets (Fine Mesh)", pricePerSqFt: 25, unit: "sq. ft.", warranty: "5 Years" },
+  { id: "anti-bird-spikes", name: "Anti-Bird Spikes (SS316)", pricePerSqFt: 85, unit: "running ft.", warranty: "5 Years" },
   { id: "invisible-grill", name: "SS316 Invisible Grills", pricePerSqFt: 140, unit: "sq. ft.", warranty: "10 Years" },
   { id: "pet-net", name: "Bite-Proof Pet Safety Nets", pricePerSqFt: 22, unit: "sq. ft.", warranty: "5 Years" },
   { id: "children-net", name: "High-Rise Child Safety Nets", pricePerSqFt: 20, unit: "sq. ft.", warranty: "5 Years" },

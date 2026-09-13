@@ -41,21 +41,21 @@ export default function ServicesPage() {
   const categories = [
     {
       id: "safety-nets",
-      name: "Safety Nets (10 Services)",
+      name: `Safety Nets (${servicesList.filter((s) => s.category === "safety-nets").length} Services)`,
       icon: <Shield className="w-5 h-5 text-[#4FC3F7]" />,
-      description: "Custom-fitted, high-tensile HDPE safety nets for child safety, pet security, bird prevention, anti-bird spikes, and sports grounds.",
+      description: "Custom-fitted, high-tensile HDPE safety nets for child safety, pet security, bird prevention, mosquito exclusion, anti-bird spikes, and sports grounds.",
       items: servicesList.filter((s) => s.category === "safety-nets"),
     },
     {
       id: "invisible-grills",
-      name: "Invisible Grills (6 Services)",
+      name: `Invisible Grills (${servicesList.filter((s) => s.category === "invisible-grills").length} Services)`,
       icon: <Eye className="w-5 h-5 text-[#4FC3F7]" />,
       description: "Elegant, marine-grade SS316 cable grills for balconies, windows, staircases, child & pet safety, and commercial complexes.",
       items: servicesList.filter((s) => s.category === "invisible-grills"),
     },
     {
       id: "cloth-hangers",
-      name: "Cloth Hangers (2 Services)",
+      name: `Cloth Hangers (${servicesList.filter((s) => s.category === "cloth-hangers").length} Services)`,
       icon: <Settings className="w-5 h-5 text-[#4FC3F7]" />,
       description: "Rustproof dual-rope pulley and wall-mounted drying systems to optimize balcony floor space.",
       items: servicesList.filter((s) => s.category === "cloth-hangers"),

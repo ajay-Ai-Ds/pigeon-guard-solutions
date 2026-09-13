@@ -63,9 +63,9 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               {[
                 { label: "Balcony Safety Nets", href: "/services/balcony-safety-nets" },
-                { label: "Children Safety Nets", href: "/services/children-safety-nets" },
-                { label: "Pet Safety Nets", href: "/services/pet-safety-nets" },
                 { label: "Pigeon Safety Nets", href: "/services/pigeon-safety-nets" },
+                { label: "Mosquito Safety Nets", href: "/services/mosquito-safety-nets" },
+                { label: "Anti-Bird Spikes", href: "/services/anti-bird-spikes" },
                 { label: "Balcony Invisible Grills", href: "/services/balcony-invisible-grills" },
                 { label: "Window Invisible Grills", href: "/services/window-invisible-grills" },
                 { label: "Staircase Invisible Grills", href: "/services/staircase-invisible-grills" },

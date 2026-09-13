@@ -23,6 +23,7 @@ const safetyNetsServices = [
   { name: "Children Safety Nets", href: "/services/children-safety-nets" },
   { name: "Pet Safety Nets", href: "/services/pet-safety-nets" },
   { name: "Pigeon Safety Nets", href: "/services/pigeon-safety-nets" },
+  { name: "Mosquito Safety Nets", href: "/services/mosquito-safety-nets" },
   { name: "Sports Nets", href: "/services/sports-nets" },
   { name: "Construction Safety Nets", href: "/services/construction-safety-nets" },
   { name: "Duct Area Safety Nets", href: "/services/duct-area-safety-nets" },

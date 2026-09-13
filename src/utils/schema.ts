@@ -18,6 +18,7 @@ export const ALL_18_SERVICES = [
   "Children Safety Nets",
   "Pet Safety Nets",
   "Pigeon Safety Nets",
+  "Mosquito Safety Nets",
   "Monkey Safety Nets",
   "Cricket Nets",
   "Sports Nets",
@@ -25,13 +26,13 @@ export const ALL_18_SERVICES = [
   "Duct Area Safety Nets",
   "Anti-Bird Spikes",
   "Balcony Invisible Grills",
+  "Children Invisible Grills",
+  "Pet Invisible Grills",
   "Window Invisible Grills",
   "Staircase Invisible Grills",
-  "Custom Invisible Grills",
+  "Commercial Invisible Grills",
   "Ceiling Cloth Hangers",
   "Balcony Cloth Hangers",
-  "Wall Mounted Cloth Hangers",
-  "Pull Down Cloth Hangers",
 ];
 
 export function generateOrganizationSchema() {

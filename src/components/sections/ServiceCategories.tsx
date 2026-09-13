@@ -19,7 +19,7 @@ const categories: Category[] = [
   {
     id: 1,
     name: "Safety Nets",
-    count: "10 Services Available",
+    count: "11 Services Available",
     image: "/images/hero/hero_safety_net.png",
     icon: <Shield className="w-6 h-6 text-white" />,
     description: "Secure your balconies, staircases, and ducts with high-density polyethylene netting designed for children and pet safety.",
