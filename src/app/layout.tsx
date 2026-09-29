@@ -27,6 +27,7 @@ const geistMono = Geist_Mono({
 });
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || "G-PIGEONGUARD";
+const GOOGLE_ADS_ID = "AW-18448257275";
 
 export const metadata: Metadata = {
   title: {
@@ -115,13 +116,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased bg-white text-slate-900 flex flex-col min-h-screen selection:bg-sky-500 selection:text-white`}
       >
-        {/* Google Analytics 4 (GA4) Tracking Script */}
+        {/* Google Tag (GA4 & Google Ads) */}
         <Script
           strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
         />
         <Script
-          id="google-analytics"
+          id="google-tags"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
@@ -131,6 +132,7 @@ export default function RootLayout({
               gtag('config', '${GA_MEASUREMENT_ID}', {
                 page_path: window.location.pathname,
               });
+              gtag('config', '${GOOGLE_ADS_ID}');
             `,
           }}
         />
